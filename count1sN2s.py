@@ -1,5 +1,3 @@
-
-
 def count1sN2s():
 
     number = int(input("Please enter a number: "))
