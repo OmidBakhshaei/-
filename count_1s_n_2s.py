@@ -1,16 +1,23 @@
 def count_1s_n_2s():
 
-    number = int(input("Please enter a number: "))
 
-    numOf1s = 0
-    numOf2s = 0
-    ones_list = []
-    twos_list = []
+"""adds every digit of numbers in a range
+until they are down to one digit,
+and check if there are more 1s or 2s.
+"""
+number = int(input("Please enter a number: "))
 
-    for num in range(1, number+1):
+numOf1s = 0
+numOf2s = 0
+ones_list = []
+twos_list = []
+
+   for num in range(1, number+1):
         realnum = num
         Sum = 0
+        # add all the digits of a number until they are down to one digit
         while Sum > 9 or Sum == 0:
+            # convert the number to a string and then again to an integer
             Sum = sum([int(i) for i in str(num)])
             num = Sum
             if Sum == 1:
