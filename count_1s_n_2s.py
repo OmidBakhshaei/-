@@ -4,8 +4,6 @@ def count_1s_n_2s():
     and check if there are more 1s or 2s.
     """
     number = int(input("Please enter a number: "))
-    if number = 0 or not isinstance(number, int):
-        raise ValueError("Your input is not valid!")
 
     numOf1s = 0
     numOf2s = 0
