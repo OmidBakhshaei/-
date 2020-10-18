@@ -1,10 +1,10 @@
 def count_1s_n_2s():
 
-
 """adds every digit of numbers in a range
 until they are down to one digit,
 and check if there are more 1s or 2s.
 """
+
 number = int(input("Please enter a number: "))
 
 numOf1s = 0
