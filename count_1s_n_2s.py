@@ -10,7 +10,7 @@ def count_1s_n_2s():
     ones_list = []
     twos_list = []
 
-    for num in range(1, number+1):
+    for num in range(1, number):
         realnum = num
         Sum = 0
         # add all the digits of a number until they are down to one digit.
