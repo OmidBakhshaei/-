@@ -21,20 +21,28 @@
                 // ['امید', 3],
                 // ['آریان', 2],
                 // ['پرهام', 2],
-                [''],
-                [4.47],
-                [0],
-                [9.35],
-                [3.89],
-                [0],
-                [12.09],
+                ['ثانیه', 'Value'],
+                [4.47, "Seconds"],
+                [0, "Seconds"],
+                [9.35, "Seconds"],
+                [3.89, "Seconds"],
+                [4.26, "Seconds"],
+                [12.09, "Seconds"],
             ]);
 
 
             var options = {
+                // chartArea:{
+                //     left:10,
+                //     right:10, // !!! works !!!
+                //     bottom:20,  // !!! works !!!
+                //     top:20,
+                //     width:"100%",
+                //     height:"100%"
+                // }
                 width: 1000, height: 150,
                 minorTicks: 10,
-                max: 40,
+                max: 20,
                 min: 0,
                 // majorTicks: ['10']
             };
@@ -48,18 +56,23 @@
     </script>
 </head>
 
-<body>
+<body bgcolor = "Black">
     <div id="chart_div" style="width: 100px; height: 150px;"></div>
     <!-- <a href="http://www.studentstutorial.com" target=“ _blank ">امیر</a> -->
     <table>
         <tr>
-            <td style="padding:0 15px 0 60px;"><a href="https://raw.githubusercontent.com/amir-mhd/karademy/master/return1_return2.py" target=“ _blank >امیر</a></td>
-            <td style="padding:0 15px 0 112px;"><a href="https://raw.githubusercontent.com/v-nafiseh/Functions/master/functions.py" target=“ _blank >نفیسه</a></td>
-            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/ruhollahmozafari/homework/second_assignment/digits.py" target=“ _blank >روح الله</a></td>
-            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/OmidBakhshaei/Karademy/master/count_1s_n_2s.py" target=“ _blank >امید</a></td>
-            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/LoneStarAllers/first-project/master/Digits.py" target=“ _blank >پرهام</a></td>
+            align = center
+            <td style="padding:0 15px 0 60px;"><a href="https://raw.githubusercontent.com/amir-mhd/karademy/master/return1_return2.py" style="color:white; text-decoration:none" target=“ _blank >امیر</a></td>
+            <td style="padding:0 15px 0 112px;"><a href="https://raw.githubusercontent.com/v-nafiseh/Functions/master/functions.py" style="color:white; text-decoration:none" target=“ _blank >نفیسه</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/ruhollahmozafari/homework/second_assignment/digits.py" style="color:white; text-decoration:none" target=“ _blank >روح الله</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/OmidBakhshaei/Karademy/master/count_1s_n_2s.py" style="color:white; text-decoration:none" target=“ _blank >امید</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/arian-rad/task2-one-or-two/master/venv/tamrin2.py" style="color:white; text-decoration:none" target=“ _blank >آریان</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/LoneStarAllers/first-project/master/Digits.py" style="color:white; text-decoration:none" target=“ _blank >پرهام</a></td>
         </tr>
     </table>
 </body>
 
 </html>
+
+
+<!-- position:absolute;right:0px;top:0px; -->
