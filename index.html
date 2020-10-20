@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['gauge'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable([
+                // ['Label', 'Value'],
+                // ['امیر', 8],
+                // ['نفیسه', 5.5],
+                // ['روح الله', 7],
+                // ['امید', 3],
+                // ['آریان', 2],
+                // ['پرهام', 2],
+                [''],
+                [8],
+                [5.5],
+                [7],
+                [3],
+                [2],
+            ]);
+
+
+            var options = {
+                width: 1000, height: 150,
+                minorTicks: 10,
+                max: 40,
+                min: 0,
+                // majorTicks: ['10']
+            };
+
+            var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+
+            google.visualization.events.addListener(chart, 'select', selectHandler);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="chart_div" style="width: 100px; height: 150px;"></div>
+    <!-- <a href="http://www.studentstutorial.com" target=“ _blank ">امیر</a> -->
+    <table>
+        <tr>
+            <td style="padding:0 15px 0 60px;"><a href="https://raw.githubusercontent.com/amir-mhd/karademy/master/return1_return2.py" target=“ _blank >امیر</a></td>
+            <td style="padding:0 15px 0 112px;"><a href="https://raw.githubusercontent.com/v-nafiseh/Functions/master/functions.py" target=“ _blank >نفیسه</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/ruhollahmozafari/homework/second_assignment/digits.py" target=“ _blank >روح الله</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/OmidBakhshaei/Karademy/master/count_1s_n_2s.py" target=“ _blank >امید</a></td>
+            <td style="padding:0 15px 0 105px;"><a href="https://raw.githubusercontent.com/LoneStarAllers/first-project/master/Digits.py" target=“ _blank >پرهام</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>
