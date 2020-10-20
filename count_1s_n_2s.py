@@ -1,9 +1,11 @@
-def count_1s_n_2s():
+def count_1s_n_2s(number):
     """adds every digit of numbers in a range
     until they are down to one digit,
     and check if there are more 1s or 2s.
     """
-    number = int(input("Please enter a number: "))
+#     number = int(input("Please enter a number: "))
+    if number == 0 or not isinstance(number, int):
+        raise ValueError("Your input is not valid!")
 
     numOf1s = 0
     numOf2s = 0
@@ -38,8 +40,7 @@ def count_1s_n_2s():
     yes_or_no = input(
         f'If you want to see the numbers that lead to 1s and 2s between 0 and {number} please enter "Yes": ')
     if yes_or_no.lower() in ["yes", "y", ""]:
-        print(
-            f"\nThe numbers which lead to a 1 are: {ones_list} \n\nThe numbers which lead to a 2 are: {twos_list}")
+        return f"\nThe numbers which lead to a 1 are: {ones_list} \n\nThe numbers which lead to a 2 are: {twos_list}"
 
 
-count_1s_n_2s()
+print(count_1s_n_2s(100))
