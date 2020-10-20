@@ -7,8 +7,6 @@ def count_1s_n_2s(number):
     if number == 0 or not isinstance(number, int):
         raise ValueError("Your input is not valid!")
 
-    numOf1s = 0
-    numOf2s = 0
     ones_list = []
     twos_list = []
 
@@ -22,25 +20,15 @@ def count_1s_n_2s(number):
             num = Sum
             if Sum == 1:
                 ones_list.append(realnum)
-                numOf1s += 1
             elif Sum == 2:
                 twos_list.append(realnum)
-                numOf2s += 1
 
-    print(
-        f'\nThere are "{numOf1s}" 1s and "{numOf2s}" 2s in the provided range.')
-
-    if numOf1s > numOf2s:
-        print(f'So there are more 1s than 2s.\n')
-    elif numOf1s < numOf2s:
-        print(f'So there are more 2s than 1s.\n')
+    if len(ones_list) > len(twos_list):
+        return f'There are more 1s than 2s.\n'
+    elif len(ones_list) < len(twos_list):
+        return f'There are more 2s than 1s.\n'
     else:
-        print(f'So there is an even number of 1s and 2s.\n')
-
-    yes_or_no = input(
-        f'If you want to see the numbers that lead to 1s and 2s between 0 and {number} please enter "Yes": ')
-    if yes_or_no.lower() in ["yes", "y", ""]:
-        return f"\nThe numbers which lead to a 1 are: {ones_list} \n\nThe numbers which lead to a 2 are: {twos_list}"
+        return f'There is an even number of 1s and 2s.\n'
 
 
-print(count_1s_n_2s(100))
+print(count_1s_n_2s(100000))
