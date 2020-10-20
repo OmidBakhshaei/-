@@ -1,3 +1,7 @@
+import time
+start_time = time.time()
+
+
 def count_1s_n_2s(number):
     """adds every digit of numbers in a range
     until they are down to one digit,
@@ -28,7 +32,9 @@ def count_1s_n_2s(number):
     elif len(ones_list) < len(twos_list):
         return f'There are more 2s than 1s.\n'
     else:
-        return f'There is an even number of 1s and 2s.\n'
+        return f'There is an even number of 1s and 2s({len(ones_list)}).\n'
 
 
-print(count_1s_n_2s(100000))
+print(count_1s_n_2s(1000))
+
+print("--- %s seconds ---" % (time.time() - start_time))
